@@ -1,57 +1,31 @@
-## AlexNet Implementation
-This repository is about AlexNet in Tensorflow 2 , I used tf.keras.Model and tf.layers.Layer instead of tf.keras.models.Sequential.  This allows us to customize and have full control of the model, I also used custom training instead of relying on the fit() function.  
-In case we have very huge dataset, I applied online loading (by batch) instead of loading the data completely at the beginning. This will eventually not consume the memory.  
-However, in case you prefer tf.keras.models.Sequential based models and loading the data completely in the beginning, then please refer to my repository: [AlexNet](https://github.com/Bao-Jiarong/AlexNet)
+## The Python tutorials
+Python is an easy to learn, powerful programming language. It has efficient high-level data structures and a simple but effective approach to object-oriented programming.    
 
-#### AlexNet Architecrure      
-<p></p>
-<center>
-<img src="img/1.png" align="center" width="700" height="300"/>
-</center>
+These tutorials do not attempt to be comprehensive and cover every single feature, or even every commonly used feature. Instead, it introduces many of Python’s most noteworthy features, and will give you a good idea of the language’s flavor and style.    
+ After reading it, you will be able to read and write Python modules and programs, and you will be ready to learn more about the various Python library modules described in The Python Standard Library.  
 
-Figure 1: image is taken from [source](https://link.springer.com/chapter/10.1007/978-3-030-04212-7_32)   
+This implementation includes the tutorial of numpy, matplotlib, pandas, opencv, object detection.
 
-<center>   
-<img src="img/2.png" width="700" height="300"/>   
-</center>
+#### Glossary
 
-Figure 2: image is taken from [source](https://www.mdpi.com/2072-4292/9/8/848/htm)   
+* **Tutorial 1: Numpy Basics**:     
+This tutorial include some very simple exercises about numpy used in array ,some of them you can have many solutions to solve ,it helps you to get familiar with numpy.  
 
-### Training on MNIST
-<p></p>
-<center>
-<img src="img/mnist.png" width="400" height="350"/>
-</center>
+* **Tutorial 2 : Numpy Matrices** :     
+After getting familiar with numpy array ,we start studying about numpy used in matrices.This part will show you some basic operations about numpy matrices, for example : get the sum, min, max of a matrix or many matrices.  
 
-### Requirement
-```
-python==3.7.0
-numpy==1.18.1
-```
-### How to use
-Training & Prediction can be run as follows:    
-`python train.py train`  
-`python train.py predict img.png`  
+* **Tutorial 3 : Matplotlib** :     
+By studying this part you can learn how to use matplotlib to draw many different Simple Plots, Subplots, Graphs, Pie Chart and 3D Plot.  
+
+* **Tutorial 4 : Pandas** :    
+This part includes quick start to pandas , the operations about table , rows, columns, items, and how to deal with files by using pandas, at the end it has some exercises for practicing .    
 
 
-### More information
-* Please refer to the original paper of AlexNet [here](https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf) for more information.
+* **Tutorial 5 : OpenCv** :  
+This part you can learn many skills about dealing with pictures, for example: read images, change the size, color and add filters. OpenCv provides a library which you can find many tools to edict images easily.
 
-### Implementation Notes
-* **Note 1**:   
-Since datasets are somehow huge and painfully slow in training ,I decided to make number of filters variable. If you want to run it in your PC, you can reduce the number of filters into 32,16,8,4 or 2. (64 is by default). For example:  
-`model = alexnet.AlexNet((113, 113, 3), classes = 10, filters = 8)`
+* **Tutorial 6 : Numpy used in AI** :   
+This part is very important for machine learning ,it introduces convolution, pooling , padding and other functions for dealing with images, it's very important for machine learning.
 
-* **Note 2** :   
-You can also make the size of images smaller, so that it can be ran faster and doesn't take too much memories.
-
-### Result for MNIST:   
-* Learning rate = 0.0001  
-* Batch size = 32  
-* Optimizer = Adam   
-* Filters = 8
-* epochs = 2
-
-Name |  Training Accuracy |  Validation Accuracy  |
-:---: | :---: | :---:
-Alexnet | 93.75% | 95.57%
+* **Tutorial 7 : Object Detection** :  
+Object detection is a computer technology related to computer vision and image processing that deals with detecting instances of semantic objects of a certain class (such as humans, buildings, or cars) in digital images and videos.You can start knowing about how it works and it's principle .
